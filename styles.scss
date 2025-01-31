@@ -1,0 +1,11 @@
+$color:red;
+$underline:underline;
+
+h4{
+    text-decoration: $underline;
+    color:$color;
+}
+
+body{
+    background-image: url('src/images/bg.jpg');
+}
