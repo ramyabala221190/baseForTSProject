@@ -1,1 +1,0 @@
-{"version":3,"file":"output.css","mappings":"AAGA,GACI,yBAHO,CAIP,SALG,CAQP,KACI,wD","sources":["webpack://basefortsdevelopment/./styles.scss"],"sourcesContent":["$color:red;\r\n$underline:underline;\r\n\r\nh4{\r\n    text-decoration: $underline;\r\n    color:$color;\r\n}\r\n\r\nbody{\r\n    background-image: url('src/images/bg.jpg');\r\n}"],"names":[],"sourceRoot":""}
