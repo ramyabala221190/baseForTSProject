@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --env production",
-    "start": "webpack serve"
+    "build-1":"webpack --env production --config webpack.config.1.js",
+    "build-2":"webpack --env production --config webpack.config.2.js",
+    "start": "webpack serve",
+    "start-1":"webpack serve --config webpack.config.1.js",
+    "start-2":"webpack serve --config webpack.config.2.js"
   },
   "author": "",
   "license": "ISC",

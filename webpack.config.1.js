@@ -38,10 +38,7 @@ let webpackConfig= (env)=>{
         },
         {
           test:/\.(png|jpg|jpeg|svg|gif)$/i,
-          type:"asset/resource",
-          generator:{
-            filename:"images/[hash][name][ext]"
-          }
+          type:"asset/inline",
         }
        
        

@@ -38,7 +38,12 @@ let webpackConfig= (env)=>{
         },
         {
           test:/\.(png|jpg|jpeg|svg|gif)$/i,
-          type:"asset/resource",
+          type:"asset",
+          parser:{
+            dataUrlCondition:{
+                maxSize:2*1024 //if the image size is less than 5kb, then use the inline way, else copy the image to the dist/images folder
+            }
+          },
           generator:{
             filename:"images/[hash][name][ext]"
           }
