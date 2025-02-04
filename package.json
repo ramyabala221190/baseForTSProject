@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --env production",
-    "start": "webpack serve"
+    "build-1":"webpack --env production --config webpack.config.1.js",
+    "start": "webpack serve",
+    "start-1":"webpack serve --config webpack.config.1.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +18,7 @@
     "mini-css-extract-plugin": "^2.9.2",
     "sass": "^1.83.4",
     "sass-loader": "^16.0.4",
+    "style-loader": "^4.0.0",
     "ts-loader": "^9.5.2",
     "typescript": "^5.7.3",
     "webpack": "^5.97.1",

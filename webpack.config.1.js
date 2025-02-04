@@ -1,5 +1,6 @@
 const path = require('path');
 const htmlWebpackPlugin=require('html-webpack-plugin');
+const miniCssExtractPlugin=require('mini-css-extract-plugin');
 
 let webpackConfig= (env)=>{
   console.log("environment variables logged",env)
@@ -28,7 +29,7 @@ let webpackConfig= (env)=>{
         {
           test:/\.scss$/,
           exclude:/node_modules/,
-          use:["style-loader","css-loader","sass-loader"], //executes from right to left
+          use:[miniCssExtractPlugin.loader,"css-loader","sass-loader"], //executes from right to left
         },
        
       ]
@@ -36,7 +37,8 @@ let webpackConfig= (env)=>{
     plugins:[
       new htmlWebpackPlugin({
         template:'./index.html'
-      })
+      }),
+      new miniCssExtractPlugin({filename:'output.css'})
     ]
   }
 }
